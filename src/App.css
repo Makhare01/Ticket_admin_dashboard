@@ -1,38 +1,268 @@
-.App {
-  text-align: center;
+.navbar-style {
+  background-color: white;
+  /* box-shadow: 0px 3px #888888; */
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.admin_search {
+  border: none;
+  line-height: 15px;
+  margin-left: 10px;
+  padding: 2px 0px 2px 0px;
+  text-indent: 10px;
+  /* border: solid 1px red; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.admin_search:focus {
+  outline: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.admin_search::placeholder {
+  font-size: 12px;
+  line-height: 15px;
+  opacity: 0.7;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.admin-dashboard-title {
+  margin: auto !important;
+}
+.admin-responsive-navbar {
+  display: none !important;
+}
+
+.admin_icon {
+  width: auto;
+  height: 30px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* border: solid 1px red; */
 }
 
-.App-link {
-  color: #61dafb;
+.admin_avarat {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.admin_name {
+  font-family: "Nunito", sans-serif;
+  font-size: 10pt;
+  line-height: 30px;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.admin_logout_icon {
+  height: 12px;
+  margin-top: 9px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.admin-main-container {
+  display: flex;
+}
+
+/* Sidebar */
+.admin-sidebar {
+  width: 150px;
+  height: auto;
+  /* height: 615px; */
+  /* border: solid 1px red; */
+}
+
+.admin-sidebar-items {
+  width: 100%;
+  height: 150px;
+  margin: 3px 0px 3px 0px;
+  border-right: solid 2px rgba(211, 211, 211, 0.2);
+  text-align: center;
+  cursor: pointer;
+}
+
+.admin-sidebar-items-active {
+  width: 100%;
+  height: 150px;
+  margin: 3px 0px 3px 0px;
+  border-right: solid 2px rgba(211, 211, 211, 0.2);
+  text-align: center;
+  cursor: pointer;
+  border-right: solid 2px #845be7;
+}
+
+.admin-sidebar-items:hover {
+  border-right: solid 2px #845be7;
+}
+
+.admin-sidebar-items:hover .admin-sidebar-icon {
+  fill: #845be7;
+}
+
+.admin-sidebar-icon {
+  margin-top: 50px;
+}
+
+.admin-sidebar-icon-active {
+  margin-top: 50px;
+  fill: #845be7;
+}
+
+/* Admin dashboard */
+
+.admin-dashboard {
+  /* width: calc(100% - 200px); */
+  width: 100%;
+  /* border: solid 1px red; */
+  margin: 0px 0px 0px 80px;
+}
+
+.admin-event-name {
+  font-family: "Nunito", sans-serif;
+  font-size: 22pt;
+  font-weight: bold;
+}
+
+.add-event-div {
+  width: 100%;
+  height: 70px;
+  /* border: solid 1px red; */
+  /* margin-top: 10px; */
+}
+
+.add-event-text {
+  font-family: "Nunito", sans-serif;
+  color: grey;
+  font-size: 12pt;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 22px;
+  line-height: 25px;
+}
+
+.add-event-text-active {
+  border-bottom: solid 2px #845be7;
+  color: #845be7;
+}
+
+.add-event-icon {
+  margin-left: auto;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.card-created-date {
+  font-family: "Nunito", sans-serif;
+  font-size: 8pt;
+  font-weight: bold;
+  color: grey;
+  line-height: 40px;
+  margin-right: 20px;
+  width: 100%;
+}
+/* .card_body {
+  width: 100%;
+  height: 200px;
+} */
+.card_title {
+  font-family: "Nunito", sans-serif;
+  font-size: 12pt;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+.free-spaces-div {
+  width: 70px;
+  height: 70px;
+  border: solid 1px grey;
+}
+
+.mycard {
+  --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  height: 250px !important;
+  position: relative;
+}
+
+.mycardSport {
+  border: none !important;
+  border-top: solid 5px PaleGreen !important;
+}
+
+.mycardEvents {
+  border: none !important;
+  border-top: solid 5px #45d3d3 !important;
+}
+
+.mycardFilms {
+  border: none !important;
+  border-top: solid 5px #fcb04d !important;
+}
+
+.mycardTheater {
+  border: none !important;
+  border-top: solid 5px #ff637b !important;
+}
+
+.edit_event {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  font-family: "Nunito", sans-serif;
+  font-size: 12pt;
+  text-decoration: none;
+  color: black;
+}
+
+/* Add sport */
+.add-sport-div {
+  /* border: solid 1px red; */
+  padding-bottom: 30px;
+}
+
+/* Responsive */
+@media only screen and (max-width: 770px) {
+  .navbar-search {
+    display: none !important;
   }
-  to {
-    transform: rotate(360deg);
+  .admin_icon {
+    display: none !important;
+  }
+  .admin-dashboard-title {
+    margin: 0 !important;
+    /* border: solid 1px red; */
+  }
+  .admin-responsive-navbar {
+    display: block !important;
+  }
+  .navbar-style {
+    display: none !important;
+  }
+  .admin-sidebar {
+    display: flex;
+    overflow-x: scroll;
+    margin-bottom: 30px;
+    width: 100% !important;
+  }
+  .admin-main-container {
+    display: block !important;
+  }
+  .admin-sidebar-items {
+    border: none;
+    width: 150px;
+  }
+  .admin-sidebar-items-active {
+    width: 150px;
+    border: none;
+    border-bottom: solid 2px #845be7;
+  }
+  .admin-dashboard {
+    margin: 0 !important;
   }
 }
