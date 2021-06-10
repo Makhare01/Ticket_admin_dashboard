@@ -7,17 +7,19 @@ class Sidebar extends Component {
   };
 
   onPageChange = (page) => {
-    this.setState({ currentPage: page });
+    // this.setState({ currentPage: this.props.active });
+    // this.state.currentPage === 3
   };
 
   render() {
+    console.log(this.props.active);
     return (
       <div className="admin-sidebar">
         <NavLink to="/admin/sport" onClick={() => this.onPageChange(1)}>
           <div
             // className="admin-sidebar-items admin-sidebar-items-active"
             className={
-              this.state.currentPage === 1
+              this.props.active == 1
                 ? "admin-sidebar-items-active"
                 : "admin-sidebar-items"
             }
@@ -28,7 +30,7 @@ class Sidebar extends Component {
               width="50px"
               xmlns="http://www.w3.org/2000/svg"
               className={
-                this.state.currentPage === 1
+                this.props.active == 1
                   ? "admin-sidebar-icon-active"
                   : "admin-sidebar-icon"
               }
@@ -44,7 +46,7 @@ class Sidebar extends Component {
         <NavLink to="/admin/event" onClick={() => this.onPageChange(2)}>
           <div
             className={
-              this.state.currentPage === 2
+              this.props.active == 2
                 ? "admin-sidebar-items-active"
                 : "admin-sidebar-items"
             }
@@ -55,7 +57,7 @@ class Sidebar extends Component {
               width="50px"
               height="50px"
               className={
-                this.state.currentPage === 2
+                this.props.active == 2
                   ? "admin-sidebar-icon-active"
                   : "admin-sidebar-icon"
               }
@@ -82,7 +84,7 @@ class Sidebar extends Component {
         <NavLink to="/admin/theater" onClick={() => this.onPageChange(3)}>
           <div
             className={
-              this.state.currentPage === 3
+              this.props.active == 3
                 ? "admin-sidebar-items-active"
                 : "admin-sidebar-items"
             }
@@ -93,7 +95,7 @@ class Sidebar extends Component {
               width="50px"
               xmlns="http://www.w3.org/2000/svg"
               className={
-                this.state.currentPage === 3
+                this.props.active == 3
                   ? "admin-sidebar-icon-active"
                   : "admin-sidebar-icon"
               }
@@ -111,7 +113,7 @@ class Sidebar extends Component {
         <NavLink to="/admin/film" onClick={() => this.onPageChange(4)}>
           <div
             className={
-              this.state.currentPage === 4
+              this.props.active == 4
                 ? "admin-sidebar-items-active"
                 : "admin-sidebar-items"
             }
@@ -122,7 +124,7 @@ class Sidebar extends Component {
               height="50px"
               viewBox="0 0 128 128"
               className={
-                this.state.currentPage === 4
+                this.props.active == 4
                   ? "admin-sidebar-icon-active"
                   : "admin-sidebar-icon"
               }

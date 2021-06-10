@@ -1,22 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import data from "../databases/sportEvents.js";
 
-const AddSport = (props) => {
+const EditSport = (props, match) => {
+  useEffect(() => {
+    console.log(props.match.params.id);
+  });
+
+  const d = data.filter((d) => d.EventId === props.match.params.id);
+  console.log(d);
+
   const [allValues, setAllValues] = useState({
-    titleGeo: "",
-    titleEng: "",
-    titleRus: "",
-    photoSmall: "",
-    photoMedium: "",
-    photoBig: "",
-    sellDate: "",
-    descriptionGeo: "",
-    descriptionEng: "",
-    descriptionRus: "",
-    location: "",
-    addressGeo: "",
-    addressEng: "",
-    addressRus: "",
-    price: "",
+    titleGeo: d[0].titleGeo,
+    titleEng: d[0].titleEng,
+    titleRus: d[0].titleRus,
+    photoSmall: d[0].photoSmall,
+    photoMedium: d[0].photoMedium,
+    photoBig: d[0].photoBig,
+    sellDate: d[0].sellStartedAt,
+    descriptionGeo: d[0].descriptionGeo,
+    descriptionEng: d[0].descriptionEng,
+    descriptionRus: d[0].descriptionRus,
+    location: d[0].location,
+    addressGeo: d[0].addressGeo,
+    addressEng: d[0].addressEng,
+    addressRus: d[0].addressRus,
+    price: d[0].price,
   });
 
   const changeHandler = (e) => {
@@ -50,7 +58,7 @@ const AddSport = (props) => {
   };
   return (
     <div>
-      <p className="admin-event-name">ADD SPORT</p>
+      <p className="admin-event-name">EDIT SPORT</p>
 
       <div className="add-sport-div">
         <form onSubmit={handleSubmit}>
@@ -193,7 +201,7 @@ const AddSport = (props) => {
                 onChange={changeHandler}
                 required
               >
-                <option>აირჩიეთ მისამართი</option>
+                <option>{d[0].addressGeo}</option>
                 <option value="ბათუმი">ბათუმი</option>
                 <option value="თბილისი">თბილისი</option>
                 <option value="ქუთაისი">ქუთაისი</option>
@@ -208,7 +216,7 @@ const AddSport = (props) => {
                 onChange={changeHandler}
                 required
               >
-                <option>აირჩიეთ მისამართი</option>
+                <option>{d[0].addressEng}</option>
                 <option value="Batumi">Batumi</option>
                 <option value="Tbilisi">Tbilisi</option>
                 <option value="Kutaisi">Kutaisi</option>
@@ -223,7 +231,7 @@ const AddSport = (props) => {
                 onChange={changeHandler}
                 required
               >
-                <option>აირჩიეთ მისამართი</option>
+                <option>{d[0].addressRus}</option>
                 <option value="Батуми">Батуми</option>
                 <option value="Тбилиси">Тбилиси</option>
                 <option value="Кутаиси">Кутаиси</option>
@@ -263,4 +271,4 @@ const AddSport = (props) => {
   );
 };
 
-export default AddSport;
+export default EditSport;

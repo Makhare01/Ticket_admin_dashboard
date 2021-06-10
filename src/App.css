@@ -58,10 +58,13 @@
 }
 
 .admin_logout_icon {
-  height: 12px;
   margin-top: 9px;
   margin-left: 10px;
   cursor: pointer;
+}
+
+.admin_logout_icon:hover {
+  fill: #845be7;
 }
 
 .admin-main-container {
@@ -146,7 +149,22 @@
 
 .add-event-text-active {
   border-bottom: solid 2px #845be7;
-  color: #845be7;
+  color: #845be7 !important;
+}
+
+.topAll-events-text {
+  font-family: "Nunito", sans-serif;
+  font-size: 12pt;
+  font-weight: bold;
+  color: grey;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 22px;
+  height: 25px;
+}
+
+.topAll-events-text:hover {
+  color: #845be7 !important;
 }
 
 .add-event-icon {
@@ -218,6 +236,10 @@
   font-size: 12pt;
   text-decoration: none;
   color: black;
+}
+
+.edit_event:hover {
+  color: #845be7 !important;
 }
 
 /* Add sport */
